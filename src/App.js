@@ -6,11 +6,11 @@ import Footer from "./components/footer/footer";
 export default class App extends Component {
   render() {
     return (
-      <div className="App">
-          <Header/>
+      <main className="container">
+          {/*<Header/>*/}
           <Container/>
-          <Footer/>
-      </div>
+          {/*<Footer/>*/}
+      </main>
     );
   }
 }
