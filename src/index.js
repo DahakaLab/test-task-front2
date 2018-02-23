@@ -1,0 +1,16 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './style/index.css';
+import App from './App';
+import registerServiceWorker from './registerServiceWorker';
+import { BrowserRouter } from 'react-router-dom';
+import { headerNode } from './nodes/headerNode.js';
+
+headerNode();
+
+ReactDOM.render(
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>,
+    document.getElementById('root'));
+registerServiceWorker();
