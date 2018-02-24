@@ -33,7 +33,7 @@ export default class ItemProduct extends Component {
             title = this.props.data.title,
             description = this.props.data.description,
             primaryImageUrl = this.props.data.primaryImageUrl.substring(0, this.props.data.primaryImageUrl.length - 4) + '_220x220_1.jpg',
-            assocProducts = this.props.data.assocProducts,
+            assocProducts = this.props.data.assocProducts.split(';'),
             weight = this.props.data.weight,
             unit = this.props.data.unit,
             unitFull = this.props.data.unitFull,
@@ -76,12 +76,12 @@ export default class ItemProduct extends Component {
 
                                     <div className="product_tags hidden-sm">
                                         <p>Могут понадобиться:</p>
-                                        <a className="url__link"> подложка,</a>
-                                        <a className="url__link"> плинтус натуральный,</a>
-                                        <a className="url__link"> рулетка,</a>
-                                        <a className="url__link"> набор для укладки ламината,</a>
-                                        <a className="url__link"> ножовка по ламинату,</a>
-                                        <a className="url__link"> гель для стыков ламината Clic Protect.</a>
+                                        <a className="url__link"> {assocProducts[0]},</a>
+                                        <a className="url__link"> {assocProducts[1]}</a>
+                                        <a className="url__link"> {assocProducts[2]}</a>
+                                        <a className="url__link"> {assocProducts[3]}</a>
+                                        <a className="url__link"> {assocProducts[4]}</a>
+                                        <a className="url__link"> {assocProducts[5]}</a>
                                     </div>
 
                                     <div className="product_units">

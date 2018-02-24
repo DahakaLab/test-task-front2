@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import allProductData from "../../data/products.json";
-import Product from "./product";
+import Product from "./productPattern";
 
 export default class Container extends Component{
     constructor(props){

@@ -4,10 +4,10 @@ import ItemProduct from './itemProduct.js';
 export default class Product extends Component {
     render() {
         const data = this.props.data;
-        let productTamplate;
+        let productTemplate;
 
         if (data.length > 0) {
-            productTamplate = this.props.data.map(function (item, index) {
+            productTemplate = this.props.data.map(function (item, index) {
                 return (
                     <div key={index}>
                         <ItemProduct data={item}/>
@@ -15,12 +15,12 @@ export default class Product extends Component {
                 );
             });
         } else {
-            productTamplate = <p>Записей по продуктам нет.</p>;
+            productTemplate = <p>Записей по продуктам нет.</p>;
         }
 
         return (
             <div className="content_view_text">
-                {productTamplate}
+                {productTemplate}
             </div>
         );
     }
