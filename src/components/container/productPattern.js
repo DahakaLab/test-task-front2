@@ -4,16 +4,17 @@ import ItemProduct from './itemProduct.js';
 export default class Product extends Component {
     render() {
         const data = this.props.data;
-        let productTemplate;
+        let productTemplate = [];
 
         if (data.length > 0) {
-            productTemplate = this.props.data.map(function (item, index) {
-                return (
-                    <div key={index}>
-                        <ItemProduct data={item}/>
+
+            for(let i = 0; i < 20; i++) {
+                productTemplate[i] =
+                    <div key={i}>
+                        <ItemProduct data={this.props.data[i]}/>
                     </div>
-                );
-            });
+            }
+
         } else {
             productTemplate = <p>Записей по продуктам нет.</p>;
         }

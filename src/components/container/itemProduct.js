@@ -50,7 +50,7 @@ export default class ItemProduct extends Component {
             modified = this.state.modified;
 
         return (
-            <div className={"device_notebooks " + "article "}>
+            <div className={"device_notebooks article "}>
                 <div className="column_right column_right_products_container">
                     <div className="product_area">
                         <div className="production_section">

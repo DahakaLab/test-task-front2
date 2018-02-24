@@ -8,9 +8,7 @@ export default class Container extends Component{
         this.state = {
             allProductDataState: allProductData
         };
-
     }
-
 
     render(){
         return(
