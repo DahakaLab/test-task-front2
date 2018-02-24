@@ -14,8 +14,18 @@
 
 .container {
   width: 1250px;
-  margin: 0 auto;
+  margin: 20px auto;
   display: block;
+}
+
+.page_link_container {
+  display: table;
+  margin: 20px auto;
+  position: relative;
+  width: 50%;
+  button {
+    margin: 0 5px;
+  }
 }
 
 .column_right {
@@ -355,9 +365,10 @@ input {
 
 .main_footer {
   display: table;
-  position: absolute;
-  top: 100vh;
-  min-width: 100vw;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   padding: 28px 0;
   background-color: darken($dark, 8%);
   text-align: center;

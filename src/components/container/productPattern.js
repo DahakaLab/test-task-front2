@@ -3,12 +3,14 @@ import ItemProduct from './itemProduct.js';
 
 export default class Product extends Component {
     render() {
-        const data = this.props.data;
+        const data = this.props.data,
+            dataPage = this.props.dataPage;
+
         let productTemplate = [];
 
         if (data.length > 0) {
 
-            for(let i = 0; i < 20; i++) {
+            for(let i = dataPage[0]; i < dataPage[1]; i++) {
                 productTemplate[i] =
                     <div key={i}>
                         <ItemProduct data={this.props.data[i]}/>

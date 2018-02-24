@@ -59,7 +59,7 @@ export default class ItemProduct extends Component {
                                     <span className="product_code">Код: {code}</span>
 
                                     <div className="product_status_tooltip_container">
-                                        <span className="product_status">Наличие: {weight}</span>
+                                        <span className="product_status">Наличие: {weight} шт.</span>
                                     </div>
 
                                     <div className="product_photo">
