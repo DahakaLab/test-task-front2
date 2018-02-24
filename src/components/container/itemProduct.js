@@ -76,12 +76,12 @@ export default class ItemProduct extends Component {
 
                                     <div className="product_tags hidden-sm">
                                         <p>Могут понадобиться:</p>
-                                        <a className="url__link"> {assocProducts[0]},</a>
-                                        <a className="url__link"> {assocProducts[1]}</a>
-                                        <a className="url__link"> {assocProducts[2]}</a>
-                                        <a className="url__link"> {assocProducts[3]}</a>
-                                        <a className="url__link"> {assocProducts[4]}</a>
-                                        <a className="url__link"> {assocProducts[5]}</a>
+                                        <a className="url__link"> {assocProducts[0]}{(assocProducts.length - 1 > 1 ? ", ":(assocProducts.length === 1 ? "Нет подходящих товаров.":""))}</a>
+                                        <a className="url__link">{assocProducts[1]}{(assocProducts.length - 1 > 2 ? ", ":(assocProducts.length === 2 ? ".":""))}</a>
+                                        <a className="url__link">{assocProducts[2]}{(assocProducts.length - 1 > 3 ? ", ":(assocProducts.length === 3 ? ".":""))}</a>
+                                        <a className="url__link">{assocProducts[3]}{(assocProducts.length - 1 > 4 ? ", ":(assocProducts.length === 4 ? ".":""))}</a>
+                                        <a className="url__link">{assocProducts[4]}{(assocProducts.length - 1 > 5 ? ", ":(assocProducts.length === 5 ? ".":""))}</a>
+                                        <a className="url__link">{assocProducts[5]}{(assocProducts.length - 1 > 6 ? ".":(assocProducts.length === 6 ? ".":""))}</a>
                                     </div>
 
                                     <div className="product_units">
