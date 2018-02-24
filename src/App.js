@@ -9,7 +9,7 @@ export default class App extends Component {
       <main className="main_container">
           <Header/>
           <Container/>
-          <Footer/>
+          {/*<Footer/>*/}
       </main>
     );
   }
