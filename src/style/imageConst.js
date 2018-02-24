@@ -1,0 +1,1 @@
+export const IMAGE_HEADER = `url(https://pp.userapi.com/c830401/v830401665/72a3d/WdjJKErrIb0.jpg)`;

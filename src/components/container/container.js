@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class Container extends Component{
     render(){
         return(
-            <div className="sub_category_page">
+            <div className="sub_category_page container">
                 <div className="column_right column_right_products_container">
                     <div className="product_area">
                         <div className="production_section">
@@ -16,31 +16,31 @@ export default class Container extends Component{
                                     </div>
 
                                     <div className="product_photo">
-                                        <a href="#" className="url--link product__link">
-                                            <img src="https://tdp.ru/images/p/ddd/9dce0-5800-11e5-b9a9-00259036a192_220x220_1.jpg"/>
+                                        <a className="url--link product__link">
+                                            <img src={'https://tdp.ru/images/p/ddd/9dce0-5800-11e5-b9a9-00259036a192_220x220_1.jpg'}/>
                                         </a>
                                     </div>
 
                                     <div className="product_description">
-                                        <a href="#" className="product__link">
+                                        <a className="product__link">
                                             Ламинат 31 кл Kronospan Kronofix Афцелия Малайская 2,47 м.кв. 7 мм
                                         </a>
                                     </div>
 
                                     <div className="product_tags hidden-sm">
                                         <p>Могут понадобиться:</p>
-                                        <a href="#" className="url__link"> подложка,</a>
-                                        <a href="#" className="url__link"> плинтус натуральный,</a>
-                                        <a href="#" className="url__link"> рулетка,</a>
-                                        <a href="#" className="url__link"> набор для укладки ламината,</a>
-                                        <a href="#" className="url__link"> ножовка по ламинату,</a>
-                                        <a href="#" className="url__link"> гель для стыков ламината Clic Protect.</a>
+                                        <a className="url__link"> подложка,</a>
+                                        <a className="url__link"> плинтус натуральный,</a>
+                                        <a className="url__link"> рулетка,</a>
+                                        <a className="url__link"> набор для укладки ламината,</a>
+                                        <a className="url__link"> ножовка по ламинату,</a>
+                                        <a className="url__link"> гель для стыков ламината Clic Protect.</a>
                                     </div>
 
                                     <div className="product_units">
                                         <div className="unit--wrapper">
                                             <div className="unit--select unit--active">
-                                                <p className="ng-binding">За м. кв</p>
+                                                <p className="ng-binding">За м. кв.</p>
                                             </div>
                                             <div className="unit--select">
                                                 <p className="ng-binding">За упаковку</p>
@@ -84,7 +84,7 @@ export default class Container extends Component{
                                     <div className="product__wrapper">
                                         <div className="product_count_wrapped">
                                             <div className="stepper">
-                                                <input className="product__count stepper-input" type="text" value="1"/>
+                                                <input className="product__count stepper-input" type="text" defaultValue="1"/>
                                                 <span className="stepper-arrow up"/>
                                                 <span className="stepper-arrow down"/>
                                             </div>

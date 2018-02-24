@@ -1,6 +1,17 @@
 @import "base.scss";
 @import "vars.scss";
 
+.main_header {
+  display: table;
+  min-height: 35vh;
+  min-width: 100vw;
+  position: relative;
+  text-align: center;
+  h1 {
+    margin-top: 10vh ;
+  }
+}
+
 .container {
   width: 1250px;
   margin: 0 auto;
@@ -161,12 +172,12 @@
     background: $white;
     border: 1px solid $border2;
     .unit--desc-i {
-       display: inline-block;
+      display: inline-block;
       vertical-align: top;
       width: 15px;
       height: 15px;
       margin: 8px 10px 0 0;
-      background: $accent;
+      background: url(../data/images/icons/product/unit--i.png) 50% no-repeat;
       background-size: cover;
     }
     .unit--desc-t {
@@ -235,7 +246,7 @@
         z-index: 49;
       }
       .stepper-arrow  {
-        background: url(images/templates/jquery.fs.stepper-arrows.png) no-repeat $white;
+        background: url(../data/images/templates/jquery.fs.stepper-arrows.png) no-repeat $white;
         border: 1px solid $border2;
         cursor: pointer;
         display: block;
@@ -340,4 +351,39 @@ input {
   -webkit-appearance: none;
   text-align: center;
   border-radius: 0;
+}
+
+.main_footer {
+  display: table;
+  position: absolute;
+  top: 100vh;
+  min-width: 100vw;
+  padding: 28px 0;
+  background-color: darken($dark, 8%);
+  text-align: center;
+  color: $footer1;
+}
+.footer_logo {
+  font-family: Play, sans-serif;
+  font-size: 22px;
+  line-height: 1.2;
+  span {
+    display: block;
+    font-size: 27px;
+    a:link,
+    a:visited,
+    a:active{
+      color: $footer2;
+      text-decoration: none;
+    }
+    a:hover {
+      color: $accent;
+      text-decoration: none;
+    }
+  }
+}
+.footer_copy {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
 }
