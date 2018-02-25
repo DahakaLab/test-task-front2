@@ -10,15 +10,13 @@ export default class ItemProduct extends Component {
 
     }
 
-    addQuantityProduct(){
-        let x = this.state.quantityProduct;
+    addQuantityProduct(x){
         x++;
         this.setState({quantityProduct: x})
     }
 
-    delQuantityProduct(){
+    delQuantityProduct(x){
         if(this.state.quantityProduct > 0){
-            let x = this.state.quantityProduct;
             x--;
             this.setState({quantityProduct: x})
         }else{
@@ -29,25 +27,20 @@ export default class ItemProduct extends Component {
     render() {
 
         const productId = this.props.data.productId,
-            code = this.props.data.code,
+            code = 1 * this.props.data.code,
             title = this.props.data.title,
-            description = this.props.data.description,
             primaryImageUrl = this.props.data.primaryImageUrl.substring(0, this.props.data.primaryImageUrl.length - 4) + '_220x220_1.jpg',
             assocProducts = this.props.data.assocProducts.split(';'),
-            weight = this.props.data.weight,
+            weight = this.props.data.weight + " шт.",
             unit = this.props.data.unit,
             unitFull = this.props.data.unitFull,
             unitAlt = this.props.data.unitAlt,
             unitRatioAlt = this.props.data.unitRatioAlt,
-            unitFullAlt = this.props.data.unitFullAlt,
             priceRetail = this.props.data.priceRetail.toFixed(2),
             priceRetailAlt = this.props.data.priceRetailAlt.toFixed(2),
             priceGold = this.props.data.priceGold.toFixed(2),
             priceGoldAlt = this.props.data.priceGoldAlt.toFixed(2),
-            bonusAmount = this.props.data.bonusAmount,
-            hasAlternateUnit = this.props.data.hasAlternateUnit,
-            isActive = this.props.data.isActive,
-            modified = this.state.modified;
+            bonusAmount = this.props.data.bonusAmount;
 
         return (
             <div className={"device_notebooks article "}>
@@ -59,7 +52,7 @@ export default class ItemProduct extends Component {
                                     <span className="product_code">Код: {code}</span>
 
                                     <div className="product_status_tooltip_container">
-                                        <span className="product_status">Наличие: {weight} шт.</span>
+                                        <span className="product_status">{weight}</span>
                                     </div>
 
                                     <div className="product_photo">
@@ -74,7 +67,7 @@ export default class ItemProduct extends Component {
                                         </a>
                                     </div>
 
-                                    <div className="product_tags hidden-sm">
+                                    <div className="product_tags mobile">
                                         <p>Могут понадобиться:</p>
                                         <a className="url__link"> {assocProducts[0]}{(assocProducts.length - 1 > 1 ? ", ":(assocProducts.length === 1 ? "Нет подходящих товаров.":""))}</a>
                                         <a className="url__link">{assocProducts[1]}{(assocProducts.length - 1 > 2 ? ", ":(assocProducts.length === 2 ? ".":""))}</a>
@@ -110,7 +103,7 @@ export default class ItemProduct extends Component {
                                         <span className="rouble__i black__i"> Р</span>
                                     </p>
 
-                                    <div className="product_price_points">
+                                    <div className="product_price_points mobile">
                                         <p className="no-binding">Можно купить за {bonusAmount} баллов</p>
                                     </div>
 
@@ -132,8 +125,8 @@ export default class ItemProduct extends Component {
                                         <div className="product_count_wrapped">
                                             <div className="stepper">
                                                 <input className="product__count stepper-input" type="text" readOnly={true} value={this.state.quantityProduct}/>
-                                                <span className="stepper-arrow up" onClick={() => this.addQuantityProduct()}/>
-                                                <span className="stepper-arrow down" onClick={() => this.delQuantityProduct()}/>
+                                                <span className="stepper-arrow up" onClick={() => this.addQuantityProduct(this.state.quantityProduct)}/>
+                                                <span className="stepper-arrow down" onClick={() => this.delQuantityProduct(this.state.quantityProduct)}/>
                                             </div>
                                         </div>
 

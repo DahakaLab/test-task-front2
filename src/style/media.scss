@@ -1,0 +1,88 @@
+@media only screen and (max-width: 1250px) {
+  .container {
+    width: 1000px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .mobile {
+    display: table;
+    visibility: hidden;
+  }
+
+  .container {
+    width: 50%;
+  }
+
+  .page_link_container {
+    width: 20%;
+    button {
+      font-size: 10px;
+      margin: 5px 0;
+    }
+  }
+
+  .sub_category_page .column_right_products_container {
+    float: left;
+    width: 500px;
+    margin-top: 0;
+  }
+
+  .product_horizontal {
+    display: block;
+    float: left;
+    width: 240px;
+    height: 545px;
+  .product_code {
+    position: static;
+  }
+  .product_status_tooltip_container {
+    position: static;
+  }
+  .product_photo {
+    float: none;
+    margin: 10px 0 4px;
+  }
+  .product_description {
+    padding: 0;
+    width: auto;
+    font-size: 14px;
+    line-height: 20px;
+    float: none;
+  }
+  .product_tags {
+    padding: 0;
+    width: auto;
+    font-size: 14px;
+    line-height: 22px;
+    float: none;
+  }
+  .product_units {
+    position: absolute;
+    right: 15px;
+    top: inherit;
+    bottom: 95px;
+  }
+  .product_price_club_card {
+    font-size: 28px;
+    bottom: 160px;
+    right: 8px;
+    margin-top: 310px;
+  }
+  .product_price_default {
+    font-size: 26px;
+    bottom: 134px;
+    right: 8px;
+    margin-top: 310px;
+  }
+  .list--unit-desc {
+    display: none;
+    width: 219px;
+    bottom: 95px;
+    right: 9px;
+  }
+  .btn_cart {
+    right: 10px;
+    bottom: 50px; }
+  }
+}
